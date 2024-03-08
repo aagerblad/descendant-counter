@@ -1,2 +1,2 @@
 ## Descendant Counter for WorkFlowy
-- [Get bookmarklet here](https://rawbytz.github.io/descendant-counter/)
+Forked from [descendant-counter](https://rawbytz.github.io/descendant-counter/)

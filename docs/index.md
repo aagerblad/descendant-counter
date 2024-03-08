@@ -1,14 +1,3 @@
-# Descendant Counter for WorkFlowy
-- Displays the total bullet count for the zoom level.
-- Shows counts for the first level children below that. 
-- Child bullet names are clickable links.
-- To see your total bullet count, activate from the home page.
-
-![descendantCounter](https://i.imgur.com/mtuSPJx.png)
-
 ## Installation: Drag this link to your bookmarks bar:
-<a href="javascript:(function descendantCounter_1_4(){function formatName(item){const htmlEscText=str=&gt;str.replace(/&amp;/g,&quot;&amp;amp;&quot;).replace(/&gt;/g,&quot;&amp;gt;&quot;).replace(/&lt;/g,&quot;&amp;lt;&quot;).replace(/&quot;/g,&quot;&amp;quot;&quot;);const truncate=(str,max)=&gt;str.length&gt;max?`${str.substring(0,max-1)}…`:str;const truncated=htmlEscText(truncate(item.getNameInPlainText(),45));return item.isCompleted()?`&lt;s&gt;${truncated}&lt;/s&gt;`:truncated}const current=WF.currentItem();const children=current.getChildren();const pNum=current.getNumDescendants().toString();const counts=children.map(item=&gt;{const cNum=item.getNumDescendants().toString().padStart(pNum.length,&quot; &quot;);return`${cNum}\t&lt;a href=&quot;${item.getUrl()}&quot; onclick=&quot;WF.hideDialog();return true&quot;&gt;${formatName(item)}&lt;/a&gt;`});WF.showAlertDialog(`&lt;pre&gt;&lt;b&gt;${pNum}\t${formatName(current)}&lt;/b&gt;&lt;br&gt;${counts.join(&quot;&lt;br&gt;&quot;)}&lt;/pre&gt;`)})();">descendantCounter</a>
+<a href="javascript:(function()%7B(function%20descendantCounter_1_4()%20%7Bfunction%20formatName(item)%20%7Bconst%20htmlEscText%20%3D%20(str)%20%3D%3Estr.replace(%2F%26%2Fg%2C%20%22%26amp%3B%22).replace(%2F%3E%2Fg%2C%20%22%26gt%3B%22).replace(%2F%3C%2Fg%2C%20%22%26lt%3B%22).replace(%2F%22%2Fg%2C%20%22%26quot%3B%22)%3Bconst%20truncate%20%3D%20(str%2C%20max)%20%3D%3Estr.length%20%3E%20max%20%3F%20%60%24%7Bstr.substring(0%2C%20max%20-%201)%7D%E2%80%A6%60%20%3A%20str%3Bconst%20truncated%20%3D%20htmlEscText(truncate(item.getNameInPlainText()%2C%2045))%3Breturn%20item.isCompleted()%20%3F%20%60%3Cs%3E%24%7Btruncated%7D%3C%2Fs%3E%60%20%3A%20truncated%3B%7Dconst%20current%20%3D%20WF.currentItem()%3Bconst%20children%20%3D%20current.getChildren()%3Bconst%20pDir%20%3D%20children.length.toString().padStart(3%2C%20%22%20%22)%3Bconst%20pNum%20%3D%20current.getNumDescendants().toString()%3Bconst%20counts%20%3D%20children.map((item)%20%3D%3E%20%7Bconst%20cDir%20%3D%20item.getChildren().length.toString().padStart(3%2C%20%22%20%22)%3Bconst%20cNum%20%3D%20item.getNumDescendants().toString().padStart(pNum.length%2C%20%22%20%22)%3Breturn%20%60%24%7BcDir%7D%5Ct%24%7BcNum%7D%5Ct%3Ca%20href%3D%22%24%7Bitem.getUrl()%7D%22%20onclick%3D%22WF.hideDialog()%3Breturn%20true%22%3E%24%7BformatName(item)%7D%3C%2Fa%3E%60%3B%7D)%3BWF.showAlertDialog(%60%3Cpre%3E%3Cb%3E%24%7BpDir%7D%5Ct%24%7BpNum%7D%5Ct%24%7BformatName(current)%7D%3C%2Fb%3E%3Cbr%3E%24%7Bcounts.join(%22%3Cbr%3E%22)%7D%3C%2Fpre%3E%60)%3B%7D)()%7D)();">descendantCounter</a>
 
-## Links:
-- [Source code](https://github.com/rawbytz/descendant-counter/blob/master/descendantCounter.js)
-- [rawbytz Blog](https://rawbytz.wordpress.com)
